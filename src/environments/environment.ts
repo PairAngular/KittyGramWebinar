@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyBxYp7SPzhKnpnLTP42Aa5wDdiw2yBI3aU',
+    authDomain: 'pairangularauth.firebaseapp.com',
+    databaseURL: 'https://pairangularauth.firebaseio.com',
+    projectId: 'pairangularauth',
+    storageBucket: 'pairangularauth.appspot.com',
+    messagingSenderId: '429524377303',
+    appId: '1:429524377303:web:20dcae10167195f4441a92',
+    measurementId: 'G-FXSG9410E6',
+  },
 };
 
 /*

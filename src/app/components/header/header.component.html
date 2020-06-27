@@ -1,0 +1,47 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button 
+      mat-button 
+      matTooltip="KittyGram Home😻"
+      routerLink="/feed">
+      <span>KittyGram 😻</span>
+    </button>
+
+    <span class="spacer"></span>
+
+    <ng-container 
+      *ngIf="(user$ | async) as user; else loginButtonContainer">
+      <button 
+        mat-icon-button
+        routerLink="/create">
+        <mat-icon 
+          matTooltip="Create" 
+          aria-hidden="false" 
+          aria-label="Create"
+          >
+          backup
+        </mat-icon>
+      </button>
+
+      <app-profile-card
+        [user]="user"
+        (logoutClick)="logout()">
+      </app-profile-card>
+
+    </ng-container>
+
+    <ng-template #loginButtonContainer>
+      <button 
+        mat-icon-button
+        (click)="login()">
+        <mat-icon 
+          matTooltip="Login" 
+          aria-hidden="false" 
+          aria-label="Login"
+          >
+          fingerprint
+        </mat-icon>
+      </button>
+    </ng-template>
+  </mat-toolbar-row>
+</mat-toolbar>

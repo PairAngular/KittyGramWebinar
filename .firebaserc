@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "kitty-grm": {
+      "hosting": {
+        "auth-demo": [
+          "kitty-grm"
+        ]
+      }
+    }
+  }
+}
